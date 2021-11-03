@@ -1,3 +1,5 @@
+
+
 a = (1, 2, 3, 4)
 
 b= [1, 2, 3, 4]
@@ -60,4 +62,30 @@ def compte_mots_ligne(s1):
     return dic
 print(compte_mots_ligne("sjdfhrehfrhe"))
 
+def equivalent(L1,L2):
+    M=[]
+    if len(L1)<len(L2):
+        for i in range(len(L1)):
+            L = []
+            for j in range(len(L2)):
+                L.append(L1[i] == L2[j])
+            if True in L:
+                M.append(True)
+            else:
+                M.append(False)
+    else:
+        for i in range(len(L2)):
+            L = []
+            for j in range(len(L1)):
+                L.append(L2[i] == L1[j])
+            if True in L:
+                M.append(True)
+            else:
+                M.append(False)
+    return not(False in M)
+
+
+
+
+print(equivalent([1,2,3,33],[1,3,2,33,33]))
 
