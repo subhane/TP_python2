@@ -29,5 +29,14 @@ def bigrammes():
 
 print(bigrammes())
 
+def motsCommun(t1,t2):
+   L = t1.split()
+   M = t2.split()
+   R = []
+   for i in range(len(L)):
+       for j in range(len(M)):
+           if L[i] == M[j]:
+               R.append(L[i])
+   return R
 
-
+print(motsCommun("Python est un langage de programmation","Python est orienté objet"))
