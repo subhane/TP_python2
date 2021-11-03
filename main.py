@@ -18,6 +18,16 @@ def armstrong(n):
 
 print(armstrong(2000))
 
+def bigrammes():
+    L = []
+    A = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    B = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    for i in range(len(A)):
+        for k in range(len(B)):
+            L.append(A[i] + B[k])
+    return L
+
+print(bigrammes())
 
 
 
