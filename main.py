@@ -42,10 +42,22 @@ def motsCommun(t1,t2):
 print(motsCommun("Python est un langage de programmation","Python est orienté objet"))
 
 def indexImpair(s):
+    s = list(s)
     for i in range(len(s)):
         if i % 2 != 0:
-            s.replace(s[i],"#")
-    return s
+            s[i] = '#'
+    return ''.join(s)
 
 print(indexImpair("jqsfdjoijr"))
+
+def compte_mots_ligne(s1):
+    dic = {}
+    for i in range(len(s1)):
+        dic[s1[i]]=0
+        for j in range(len(s1)):
+            if s1[i] == s1[j]:
+                dic[s1[i]]+=1
+    return dic
+print(compte_mots_ligne("sjdfhrehfrhe"))
+
 
