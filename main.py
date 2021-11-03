@@ -65,15 +65,6 @@ print(compte_mots_ligne("sjdfhrehfrhe"))
 def equivalent(L1,L2):
     M=[]
     if len(L1)<len(L2):
-        for i in range(len(L1)):
-            L = []
-            for j in range(len(L2)):
-                L.append(L1[i] == L2[j])
-            if True in L:
-                M.append(True)
-            else:
-                M.append(False)
-    else:
         for i in range(len(L2)):
             L = []
             for j in range(len(L1)):
@@ -82,10 +73,27 @@ def equivalent(L1,L2):
                 M.append(True)
             else:
                 M.append(False)
+    else:
+        for i in range(len(L1)):
+            L = []
+            for j in range(len(L2)):
+                L.append(L1[i] == L2[j])
+            if True in L:
+                M.append(True)
+            else:
+                M.append(False)
     return not(False in M)
 
+print(equivalent([1,9,6,1,1,5], [5,6,1,9,5]))
+print(equivalent([5,6,1,9,5],[6,1,9,1]))
 
+def trierNbOccurence(s1):
+    L = []
+    d = compte_mots_ligne(s1)
+    for i in s1:
+        L.append(d[i])
+    L.sort()
+    return L
 
-
-print(equivalent([1,2,3,33],[1,3,2,33,33]))
+print(trierNbOccurence("qjdkfghjkfh"))
 
