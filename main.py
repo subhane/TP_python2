@@ -40,3 +40,12 @@ def motsCommun(t1,t2):
    return R
 
 print(motsCommun("Python est un langage de programmation","Python est orienté objet"))
+
+def indexImpair(s):
+    for i in range(len(s)):
+        if i % 2 != 0:
+            s.replace(s[i],"#")
+    return s
+
+print(indexImpair("jqsfdjoijr"))
+
